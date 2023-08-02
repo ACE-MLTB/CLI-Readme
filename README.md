@@ -2,7 +2,7 @@
 
 - Install Heroku CLI
 ```
-curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/SKGHD/Termux-heroku-cli/master/install.sh)"
 ```
 
 - Clone Repo
