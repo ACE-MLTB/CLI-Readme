@@ -7,7 +7,7 @@ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 - Clone Repo
 ```
-git clone https://ACE-MLTB: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@github.com/ACE-MLTB/repo
+git clone https://<username>:<token>@github.com/<username>/<repo>
 ```
 ```
 cd repo
