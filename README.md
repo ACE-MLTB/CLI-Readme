@@ -1,4 +1,4 @@
-## Deploy With CLI
+# Deploy to Heroku
 
 - Install Heroku CLI
 ```
@@ -44,7 +44,7 @@ git push heroku zh_deploy:master -f
 ```
 
 
-### Extras
+## Extras
 
 - To delete the app: heroku apps:destroy YOUR-APP-NAME
 
@@ -59,21 +59,38 @@ git push heroku zh_deploy:master -f
 - To get live logs: heroku logs -t
 
 
-1. Opitionally you can upload your config as a secret on https://gist.github.com/
+# Deploy to Railway
 
-   
-   - CONFIG_FILE_URL: Copy https://github.com/Dawn-India/Z-Mirror/blob/main/config_sample.env in any text editor. Remove the _____REMOVE_THIS_LINE_____=True line and fill the variables. For details about config you can see Here. Go to https://gist.github.com and paste your config data. Rename the file to config.env then create secret gist. Click on Raw, copy the link. This will be your CONFIG_FILE_URL. Refer to below images for clarity.
+- Install Railway CLI
+```
+npm i -g @railway/cli
+```
 
-![Steps from 1 to 3](https://graph.org/file/2a27cf34dc0bdba885de9.jpg)
+- Clone Repo
+```
+https://<deploy_token>:<empty_password>@gitlab.com/<your_username>/<repository_name>
+```
 
-![Step 4](https://graph.org/file/fb3b92a1d2c3c1b612ad0.jpg)
+```
+cd repo
+```
 
-![Step 5](https://graph.org/file/f0b208e4ea980b575dbe2.jpg)
+- Login
+```
+railway login --browserless
+```
 
-3. Remove commit id from raw link to be able to change variables without updating the CONFIG_FILE_URL in secrets. Should be in this form: https://gist.githubusercontent.com/username/gist-id/raw/config.env
-   - Before: https://gist.githubusercontent.com/Dawn-India/8cce4a4b4e7f4ea47e948b2d058e52ac/raw/19ba5ab5eb43016422193319f28bc3c7dfb60f25/config.env
-   - After: https://gist.githubusercontent.com/Dawn-India/8cce4a4b4e7f4ea47e948b2d058e52ac/raw/config.env
+- Create Project
+```
+railway init
+```
 
-4. Add all your private files in this branch.
+- Link Project to Repo
+```
+railway link <project_id>
+```
 
-5. In yout app settings click on reveal config vars and add `CONFIG_FILE_URL`
+- Deploy
+```
+railway up
+```
