@@ -43,22 +43,6 @@ heroku stack:set container
 git push heroku zh_deploy:master -f
 ```
 
-
-## Extras
-
-- To delete the app: heroku apps:destroy YOUR-APP-NAME
-
-- To restart dyno: heroku restart
-
-- To turn off dyno: heroku ps:scale web=0
-
-- To turn on dyno: heroku ps:scale web=1
-
-- To set heroku variable: heroku config:set VARNAME=CONFIG_FILE_URL
-
-- To get live logs: heroku logs -t
-
-
 # Deploy to Railway
 
 - Install Railway CLI
@@ -66,7 +50,7 @@ git push heroku zh_deploy:master -f
 npm i -g @railway/cli
 ```
 ```
-curl -fsSL https://railway.app/install.sh | sh
+sudo -s && curl -fsSL https://railway.app/install.sh | sh && exit
 ```
 
 - Clone Repo
