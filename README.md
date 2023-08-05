@@ -50,7 +50,10 @@ git push heroku zh_deploy:master -f
 npm i -g @railway/cli
 ```
 ```
-sudo -s && curl -fsSL https://railway.app/install.sh | sh && exit
+sudo -s
+```
+```
+curl -fsSL https://railway.app/install.sh | sh
 ```
 
 - Clone Repo
