@@ -1,10 +1,15 @@
 # Deploy to Heroku
 
 - Install Heroku CLI
+
+Termux
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/SKGHD/Termux-heroku-cli/master/install.sh)"
 ```
-
+Linux
+```
+curl https://cli-assets.heroku.com/install.sh | sh
+```
 - Clone Repo
 ```
 git clone https://<username>:<token>@github.com/<username>/<repo>
