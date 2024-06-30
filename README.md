@@ -1,6 +1,6 @@
-# Deploy to Heroku
+# Deploy - Heroku CLI
 
-- Install Heroku CLI
+### Install Heroku CLI
 
 Termux
 ```
@@ -10,7 +10,7 @@ Linux
 ```
 curl https://cli-assets.heroku.com/install.sh | sh
 ```
-- Clone Repo
+### Clone Repo
 ```
 git clone https://<username>:<token>@github.com/<username>/<repo>
 ```
@@ -18,50 +18,55 @@ git clone https://<username>:<token>@github.com/<username>/<repo>
 cd repo
 ```
 
-- Switch to deploy branch
+### Switch To Deploy Branch
 ```
 git checkout zh_deploy
 ```
 
-- Login to heroku (Using Email & API Key)
+### Login (Email & API Key)
 ```
 heroku login -i
 ```
 
-- Create Heroku App
+### Create Heroku App
 ```
 heroku create --region eu app
 ```
 
-- Add remote
+### Add remote
 ```
 heroku git:remote -a app
 ```
 
-- Create container
+### Create container
 ```
 heroku stack:set container
 ```
 
-- Push to heroku
+### Push To Heroku
 ```
 git push heroku zh_deploy:master -f
 ```
 
 # Deploy to Railway
 
-- Install Railway CLI
+### Install Railway CLI
+
+• Linux (via npm)
 ```
 npm i -g @railway/cli
 ```
+• Linux (via curl)
 ```
 sudo -s
-```
-```
 curl -fsSL https://railway.app/install.sh | sh
 ```
+• Termux
+```
+pkg install railway-cli
+```
 
-- Clone Repo
+### Clone Repo
 ```
 https://<deploy_token>:<empty_password>@gitlab.com/<your_username>/<repository_name>
 ```
@@ -70,22 +75,19 @@ https://<deploy_token>:<empty_password>@gitlab.com/<your_username>/<repository_n
 cd repo
 ```
 
-- Login
+### Login
 ```
 railway login --browserless
 ```
-
-- Create Project
+### Create Project
 ```
 railway init
 ```
-
-- Link Project to Repo
+### Link Project to Repo
 ```
 railway link <project_id>
 ```
-
-- Deploy
+### Run Deploy
 ```
 railway up
 ```
